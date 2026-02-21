@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomi Shah - Senior React Native Developer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            /* Navy */
+            --dark: #0f172a;
+            --text: #334155;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            /* Light Blue */
+            --sky-light: #eff6ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #f1f5f9;
+            color: var(--text);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--dark);
+            color: white;
+            padding: 45px;
+        }
+
+        .profile-header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .profile-header p {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 6px;
+            margin: 35px 0 18px;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .contact-item {
+            font-size: 13px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            margin: 0 6px 10px 0;
+            border-radius: 6px;
+            font-size: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 55px;
+        }
+
+        .main-section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .main-section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: var(--sky-light);
+        }
+
+        .experience-item {
+            margin-bottom: 35px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .exp-role {
+            font-weight: 800;
+            color: var(--dark);
+            font-size: 17px;
+        }
+
+        .exp-company {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .exp-date {
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .project-item {
+            background: var(--sky-light);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #e0f2fe;
+        }
+
+        .project-title {
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .feature-list {
+            list-style: none;
+            font-size: 13px;
+            color: #64748b;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .other-projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .small-project {
+            border-left: 3px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .small-project-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--dark);
+        }
+
+        .small-project-desc {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-header">
+                <h1>Bhoomi<br>Shah</h1>
+                <p>Sr. React Native Developer</p>
+            </div>
+
+            <div class="section-title">Contact</div>
+            <div class="contact-item">📍 Rajkot, Gujarat</div>
+            <div class="contact-item">📞 +91 7575041519</div>
+            <div class="contact-item">✉️ sbhoomi765@gmail.com</div>
+            <div class="contact-item">🔗 linkedin.com/in/bhoomishah21</div>
+
+            <div class="section-title">Skills</div>
+            <div class="skill-badge">React Native</div>
+            <div class="skill-badge">TypeScript</div>
+            <div class="skill-badge">Redux Toolkit</div>
+            <div class="skill-badge">Redux Sagas</div>
+            <div class="skill-badge">Paytm UPI</div>
+            <div class="skill-badge">Size Matters</div>
+            <div class="skill-badge">REST APIs</div>
+            <div class="skill-badge">Firebase</div>
+            <div class="skill-badge">App Store Deployment</div>
+            <div class="skill-badge">Git / CI CD</div>
+
+            <div class="section-title">Education</div>
+            <div style="font-size: 13px; font-weight: 800; color: var(--accent);">MSCIT</div>
+            <div style="font-size: 11px; margin-bottom: 15px; color: rgba(255,255,255,0.7);">Saurashtra University |
+                2021-23</div>
+
+            <div style="font-size: 13px; font-weight: 800; color: var(--accent);">BCA</div>
+            <div style="font-size: 11px; color: rgba(255,255,255,0.7);">Saurashtra University | 2017-20</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="main-section-title">Professional Summary</div>
+            <p style="font-size: 14px; color: #64748b; margin-bottom: 35px; font-weight: 500;">
+                Strategic and results-driven Senior React Native Developer with over 5 years of experience in
+                architecting high-traffic mobile applications. Expert in cross-platform development, payment gateway
+                integrations, and publishing apps to global stores.
+            </p>
+
+            <div class="main-section-title">Experience</div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">React Native Developer</div>
+                    <div class="exp-date">MAR 2025 - PRESENT</div>
+                </div>
+                <div class="exp-company">Orderloop, Rajkot</div>
+                <p class="exp-desc">Spearheading mobile innovation for enterprise food-tech solutions. Focused on
+                    high-performance ordering systems and real-time delivery tracking.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">React Native Developer</div>
+                    <div class="exp-date">OCT 2024 - JAN 2025</div>
+                </div>
+                <div class="exp-company">Codetown Technologies, Udaipur</div>
+                <p class="exp-desc">Architected robust mobile solutions for global clients, focusing on modular code and
+                    integrated third-party fintech services.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Senior React Native Developer</div>
+                    <div class="exp-date">SEP 2021 - OCT 2024</div>
+                </div>
+                <div class="exp-company">Codeal Infoway, Rajkot</div>
+                <p class="exp-desc">Led mobile transition for legacy systems. Successfully delivered 10+ scalable
+                    applications and managed the full deployment lifecycle.</p>
+            </div>
+
+            <div class="main-section-title">Key Project: Lamilano</div>
+            <div class="project-item">
+                <div class="project-title">Lamilano (High-Scale E-Commerce)</div>
+                <ul class="feature-list">
+                    <li><strong>SplashScreen</strong> implementation.</li>
+                    <li>Full <strong>Cart Screen Functionality</strong>.</li>
+                    <li>Integrated <strong>Paytm UPI</strong>.</li>
+                    <li>Dynamic <strong>Offer Screen UI</strong>.</li>
+                    <li>Core <strong>Membership Integration</strong>.</li>
+                    <li>Interactive <strong>Spin Wheel/Scratch Card</strong>.</li>
+                    <li>Professional use of <strong>Size Matters</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="main-section-title">Other Selected Works</div>
+            <div class="other-projects">
+                <div class="small-project">
+                    <div class="small-project-title">Bharat Carbon</div>
+                    <p class="small-project-desc">CEO Dashboards & Live SVG Analytics.</p>
+                </div>
+                <div class="small-project">
+                    <div class="small-project-title">Otters Club</div>
+                    <p class="small-project-desc">YouTube Live & Club Management.</p>
+                </div>
+                <div class="small-project">
+                    <div class="small-project-title">JVPG Club</div>
+                    <p class="small-project-desc">Secure Payments (CCAvenue/HDFC).</p>
+                </div>
+                <div class="small-project">
+                    <div class="small-project-title">GlobalLink</div>
+                    <p class="small-project-desc">Real-time Currency & Localization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

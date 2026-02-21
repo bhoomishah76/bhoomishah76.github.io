@@ -1,0 +1,48 @@
+/* Performance optimization for glassmorphism */
+.glass-panel {
+  will-change: transform, backdrop-filter;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Animations and transitions */
+.transition-all {
+  transition-duration: 300ms;
+}
+
+/* Snap scrolling could be nice but might be too much for a simple portfolio */
+html { scroll-behavior: smooth; }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
