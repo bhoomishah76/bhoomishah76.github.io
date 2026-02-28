@@ -5,11 +5,11 @@ import { Briefcase } from 'lucide-react';
 export default function Experience({ experiences }) {
   return (
     <section id="experience" className="section-padding bg-bg-soft relative overflow-hidden">
-      <div className="absolute top-0 right-0 text-[20rem] font-black text-navy/5 select-none pointer-events-none -mr-40 -mt-20 leading-none">EXP</div>
+      <div className="absolute top-0 right-0 text-[12rem] lg:text-[18rem] font-black text-navy/5 select-none pointer-events-none -mr-16 lg:-mr-40 -mt-10 lg:-mt-20 leading-none hidden md:block">EXP</div>
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-20">
           <span className="text-xs font-black text-sky uppercase tracking-[0.3em] mb-4 block">Professional Timeline</span>
-          <h2 className="text-4xl md:text-6xl font-heading font-black text-navy uppercase leading-tight">Career <br /> Progression.</h2>
+          <h2 className="text-4xl md:text-6xl font-heading font-black text-navy uppercase leading-[1.1]">Career <br /> Progression.</h2>
         </div>
 
         <div className="relative border-l-2 border-border-subtle ml-4 md:ml-0 md:pl-0">

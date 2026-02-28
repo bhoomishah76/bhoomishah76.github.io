@@ -66,11 +66,11 @@ export const mainProject = {
   image: LamilanoBrand,
   features: [
     { icon: <Zap size={18} />, title: 'SplashScreen', text: 'Custom branded onboarding with optimized loading.' },
-    { icon: <ShoppingCart size={18} />, title: 'Cart Functionality', text: 'Complete end-to-end cart management and optimization.' },
+    { icon: <Target size={18} />, title: 'Live Rider Tracking', text: 'Real-time logistics with automated location updates.' },
     { icon: <ShieldCheck size={18} />, title: 'Paytm UPI', text: 'Deep-linked secure payment gateway integration.' },
     { icon: <Layout size={18} />, title: 'Offer Screen UI', text: 'Dynamic promotional layouts with personalized rewards.' },
     { icon: <Award size={18} />, title: 'Gamification', text: 'Interactive Spin Wheel and Scratch Card modules.' },
-    { icon: <Target size={18} />, title: 'Size Matters', text: 'Pixel-perfect responsive styling across all devices.' }
+    { icon: <ShoppingCart size={18} />, title: 'Cart Flow', text: 'Optimized end-to-end checkout and basket management.' }
   ]
 };
 

@@ -8,9 +8,9 @@ export default function Hero({ stats, HeroImage }) {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center text-center lg:text-left">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-sky-light text-primary border border-sky/20 rounded-full mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-sky-light text-primary border border-sky/20 rounded-full mb-6 md:mb-8">
               <Sparkles size={14} />
-              <span className="text-[10px] font-black tracking-widest uppercase">Senior React Native Developer</span>
+              <span className="text-[10px] font-bold tracking-widest uppercase">Senior React Native Developer</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black mb-6 leading-tight text-navy">
@@ -18,7 +18,7 @@ export default function Hero({ stats, HeroImage }) {
               <span className="text-gradient">Seamless Apps</span>.
             </h1>
 
-            <p className="text-lg md:text-xl text-text-muted mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
+            <p className="text-base md:text-xl text-text-muted mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
               Specializing in high-performance cross-platform development with over
               <span className="text-primary font-bold"> 5 years</span> of expertise.
             </p>
@@ -43,9 +43,9 @@ export default function Hero({ stats, HeroImage }) {
               <div className="absolute inset-0 bg-primary/10 rounded-[40px] rotate-6 group-hover:rotate-3 transition-transform duration-500" />
               <div className="absolute inset-0 bg-sky/10 rounded-[40px] -rotate-6 group-hover:-rotate-3 transition-transform duration-500" />
 
-              <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-[40px] border-8 border-white shadow-2xl bg-white">
+              <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-[40px] border-8 border-white shadow-2xl bg-white max-h-[400px] md:max-h-none">
                 <img src={HeroImage} alt="Bhoomi Shah" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent opacity-40 pointer-events-none" />
               </div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1, duration: 0.5 }} className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 border border-border-subtle hidden md:block">

@@ -17,6 +17,11 @@ export default function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
+  React.useEffect(() => {
+    // Simulating "Always Allow" permissions as requested
+    console.log("%c System: All permissions granted (Always Allow) ", "background: #1e40af; color: #fff; padding: 2px 5px; border-radius: 3px;");
+  }, []);
+
   return (
     <div className="min-h-screen text-navy relative">
       <div className="bg-mesh" />

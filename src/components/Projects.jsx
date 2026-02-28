@@ -32,7 +32,7 @@ export default function Projects({ mainProject, otherProjects }) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <div className="bg-navy rounded-[40px] aspect-[9/16] max-w-[320px] mx-auto overflow-hidden border-[12px] border-navy shadow-[0_0_50px_rgba(0,0,0,0.15)] relative group-hover:scale-[1.02] transition-transform duration-700">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 to-sky/20 flex flex-col items-center justify-center p-8 text-center">
                   <img src={mainProject.image} alt={mainProject.title} className="w-48 h-48 object-contain mb-8 filter drop-shadow-2xl" />
@@ -43,6 +43,18 @@ export default function Projects({ mainProject, otherProjects }) {
                     <Play fill="#fff" className="text-white ml-1" />
                   </div>
                 </div>
+              </div>
+              {/* Floating Status Badges */}
+              <div className="absolute -right-4 top-1/4 bg-white p-4 rounded-2xl shadow-xl border border-border-subtle hidden xl:block">
+                <p className="text-[10px] font-black text-sky uppercase mb-1">Live Tracking</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <p className="text-lg font-black text-navy text-nowrap">Rider: Active</p>
+                </div>
+              </div>
+              <div className="absolute -left-8 bottom-1/4 bg-white p-4 rounded-2xl shadow-xl border border-border-subtle hidden xl:block">
+                <p className="text-[10px] font-black text-sky uppercase mb-1">Status</p>
+                <p className="text-lg font-black text-navy text-nowrap">Real-time Sync</p>
               </div>
             </div>
           </div>
