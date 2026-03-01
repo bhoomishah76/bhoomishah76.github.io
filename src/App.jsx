@@ -1,4 +1,5 @@
 import React from 'react';
+// Last deploy trigger: 2026-03-01T13:16Z
 import { motion, useScroll, useSpring } from 'framer-motion';
 import './App.css';
 
