@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ChevronRight, Zap } from 'lucide-react';
+import { getExperience } from '../utils/getExperience';
 
 export default function Hero({ stats, HeroImage }) {
+  const experience = getExperience("2021-09-01");
   return (
     <section id="home" className="section-padding min-h-[90vh] flex items-center justify-center">
       <div className="max-w-7xl mx-auto w-full">
@@ -20,11 +22,11 @@ export default function Hero({ stats, HeroImage }) {
 
             <p className="text-base md:text-xl text-text-muted mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
               Specializing in high-performance cross-platform development with over
-              <span className="text-primary font-bold"> 5 years</span> of expertise.
+              <span className="text-primary font-bold"> {experience}</span> of expertise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-              <a href="#projects" className="btn-primary flex items-center gap-2 justify-center">View Portfolio <ChevronRight size={18} /></a>
+              <a href="#projects" className="btn-primary flex items-center gap-2 justify-center">View Projects <ChevronRight size={18} /></a>
               <a href="#contact" className="btn-secondary">Let's Connect</a>
             </div>
 
