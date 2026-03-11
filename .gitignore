@@ -24,7 +24,5 @@ dist-ssr
 
 .env
 
-package-lock.json
-
 .env.staging
 /app_configs
